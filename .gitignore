@@ -1,0 +1,49 @@
+__pycache__/
+.pytest_cache/
+.env
+credentials/
+logs/
+data/
+.venv/
+venv/
+*.pyc
+.coverage
+htmlcov/
+
+# Keep these placeholder files tracked
+!data/.gitkeep
+!logs/.gitkeep
+
+# Generated artifacts that must never be tracked
+*.pyc
+*.db
+*.db-wal
+*.db-shm
+*.log
+pytest.ini.bak
+.mypy_cache/
+.ruff_cache/
+scripts/data/
+
+# Local analysis / benchmark output (not part of the application)
+*_results*.json
+paddle_results.json
+paddle_simple_results.json
+debug_paddle_response.json
+debug/
+carecorner-map/
+research_image_search_report.md
+FORENSIC_REPORT.md
+IMPLEMENTATION_STRATEGY.md
+PHASE-*.md
+PHASE*.md
+LOCAL_V*_PHASE22_ANALYSIS.md
+REFACTOR-LOG-PHASE*.md
+
+# Raw audit data (real Drive ids, filenames, photos of the collection)
+docs/*.json
+docs/customer-readiness/evidence/
+*.xlsx
+
+# Test-run logs must never be tracked
+tests/logs/

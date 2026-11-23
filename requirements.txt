@@ -1,0 +1,30 @@
+# Runtime requirements for the book-cover pipeline.
+# Verified against the working venv on Python 3.11.9 (see docs/DEPLOYMENT_READINESS.md
+# for the exact installed versions). Keep this file complete: a fresh
+# ``pip install -r requirements.txt`` must be enough to run ``python app.py``.
+
+# Configuration
+python-dotenv
+
+# Image handling and preprocessing
+Pillow
+numpy
+opencv-python-headless
+
+# Google Drive + Google Sheets clients
+google-auth
+google-api-python-client
+gspread
+
+# HTTP calls (PaddleOCR-VL, Open Library, cover downloads)
+requests
+
+# Fuzzy title/author matching for candidate ranking and same-book detection
+rapidfuzz
+
+# Test and quality tooling (not needed at runtime)
+pytest
+pytest-cov
+black
+ruff
+mypy
