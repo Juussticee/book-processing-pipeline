@@ -481,7 +481,18 @@ class TestServiceConfig:
 # --- Benchmark Data Tests ---
 
 
+BENCHMARK_GROUND_TRUTH = os.path.join(PROJECT_ROOT, "data", "clean_run_results.json")
+
+
+@pytest.mark.skipif(
+    not os.path.exists(BENCHMARK_GROUND_TRUTH),
+    reason=(
+        "the local benchmark dataset is not distributed "
+        "(data/clean_run_results.json and data/downloads)"
+    ),
+)
 class TestBenchmarkData:
+    """Checks on the local benchmark dataset, which is not part of the repository."""
 
     def test_ground_truth_has_14_images(self):
         gt = load_ground_truth()
