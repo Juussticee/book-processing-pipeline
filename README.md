@@ -274,7 +274,7 @@ in local files under `data/` rather than in the code:
 |---|---|
 | `tests/integration/test_real_photo_acceptance.py`, photo-driven parts of `tests/integration/test_pipeline_end_to_end.py` | the real photo set; set `REAL_PHOTO_FIXTURES=/path/to/dir` to a directory holding `metadata.json` plus the JPEGs |
 | `tests/integration/test_vision_benchmark.py` | `data/downloads/`, `data/vision_model_responses/`, `data/vision_benchmark_books.json`, `data/clean_run_results.json` |
-| `tests/integration/test_phase25_paddleocr_benchmark.py` | its OCR cache plus `data/rotated_images.json` |
+| `tests/integration/test_phase25_paddleocr_benchmark.py`, `TestBenchmarkData` in `tests/unit/test_paddleocr_vl_extractor.py` | its OCR cache, `data/clean_run_results.json`, `data/downloads/` and `data/rotated_images.json` |
 
 `_e2e_verify.py` (a development end-to-end check, not part of the application)
 reads its target Drive ids from `data/e2e_drive_ids.txt`.

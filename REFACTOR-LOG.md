@@ -1507,6 +1507,9 @@ Three things stood between the working tree and a clean handoff:
   used by the three affected modules.
 - `_e2e_verify.py`: reads with `ensure_layout=False`.
 - `services/metadata_enrichment_service.py.tmp` untracked.
+- `tests/unit/test_paddleocr_vl_extractor.py::TestBenchmarkData` now declares its
+  dependency on `data/clean_run_results.json`: without it the class reports a skip
+  instead of failing, which is what a clean clone does.
 - Per-collection identifiers removed from the source tree: `_e2e_verify.py` reads
   its Drive ids from `data/e2e_drive_ids.txt`, `test_phase25_paddleocr_benchmark.py`
   reads `data/rotated_images.json`, and `test_vision_benchmark.py` reads
